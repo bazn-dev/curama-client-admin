@@ -1,0 +1,17 @@
+@import 'reset.scss';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input-validation {
+  font-size: 0.75rem;
+  color: #f44336;
+}
+
+.ct-container {
+  width: 100%;
+  min-height: 100vh;
+  //margin-top: 64px;
+  box-sizing: border-box;
+}
