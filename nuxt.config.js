@@ -4,8 +4,8 @@ require('dotenv').config();
 export default {
   ssr: false,
   head: {
-    titleTemplate: 'CURAMA Admin',
-    title: 'CURAMA Admin',
+    titleTemplate: 'CURAMA | Admin',
+    title: 'CURAMA | Admin',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

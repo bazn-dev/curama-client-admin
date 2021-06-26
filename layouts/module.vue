@@ -26,7 +26,7 @@
 
     <section class="main-section">
       <v-app-bar flat elevate-on-scroll class="main-section__app-bar">
-        <v-toolbar-title class="main-section__app-bar-title">{{ getTitle }}</v-toolbar-title>
+        <v-toolbar-title class="main-section__app-bar-title">{{ 'Planner' }}</v-toolbar-title>
       </v-app-bar>
       <nuxt/>
     </section>
@@ -38,8 +38,14 @@
     data () {
       return {
         navItems: [
-          { title: 'Dashboard', name: 'dashboard', icon: 'mdi-view-dashboard' },
-          { title: 'Модули', name: 'modules', icon: 'mdi-xml' },
+          { title: 'Dashboard', name: 'module-dashboard', icon: 'mdi-view-dashboard' },
+          { title: 'Интерфейс', name: 'module-interface', icon: 'mdi-xml' },
+          { title: 'База данных', name: 'module-database', icon: 'mdi-xml' },
+          { title: 'Диалоги', name: 'module-dialogs', icon: 'mdi-xml' },
+          { title: 'API', name: 'module-api', icon: 'mdi-xml' },
+          { title: 'Функционал', name: 'module-functional', icon: 'mdi-xml' },
+          { title: 'Интеграции', name: 'module-integrations', icon: 'mdi-xml' },
+          { title: 'Виджеты', name: 'module-widgets', icon: 'mdi-xml' },
           { title: 'Настройки', name: 'settings', icon: 'mdi-xml' },
         ],
         right: null,

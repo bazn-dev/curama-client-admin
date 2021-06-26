@@ -1,80 +1,31 @@
 <template>
-  <div class="ma-3">
-    <v-layout>
-      <v-flex xs4 class="pr-2">
-        <v-text-field
-          label="URL"
-          type="text"
-          required
-          v-model="data.url"
-          autocomplete="off"
-          autofocus></v-text-field>
-      </v-flex>
-      <v-flex xs6 class="pr-2">
-        <v-text-field
-          label="Method"
-          type="text"
-          required
-          v-model="data.method"
-          autocomplete="off"
-          autofocus></v-text-field>
-      </v-flex>
-      <v-flex xs2>
-        <v-btn dark block @click="send">Send</v-btn>
-      </v-flex>
-    </v-layout>
-    <v-layout>
-      <v-flex xs12>
-        <v-textarea
-          label="Request Data"
-          type="text"
-          required
-          v-model="data.requestData"
-          autocomplete="off"
-          autofocus></v-textarea>
-      </v-flex>
-    </v-layout>
-    <v-layout>
-      <v-flex xs12>
-        <v-textarea
-          label="Response Data"
-          type="text"
-          required
-          v-model="data.responseData"
-          autocomplete="off"
-          autofocus></v-textarea>
-      </v-flex>
-    </v-layout>
+  <div class="index-page">
+    <img src="../static/images/eyes.gif">
+    <div class="index-page__text">C U R A M A</div>
   </div>
 </template>
 
 <script>
   export default {
-    data () {
-      return {
-        data: {
-          url: 'ws://localhost:8080',
-          method: '',
-          requestData: '{"title": "Sklad", "url": "http://localhost:3000", "description": "description", "createdDate": "24.03.2021"}',
-          responseData: ''
-        }
-      };
-    },
-    sockets: {
-      connect: function () {
-        console.log('socket connected');
-      },
-      getTasks: function (data) {
-        console.log(data);
-      }
-    },
-    methods: {
-      send () {
-        this.$socket.emit(this.data.method, this.data.requestData);
-        this.sockets.subscribe(this.data.method, data => {
-          this.data.responseData = JSON.stringify(data);
-        });
-      }
-    }
+    layout: 'empty'
   }
 </script>
+
+<style lang="scss" scoped>
+  .index-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+
+    &__text {
+      position: absolute;
+      bottom: 30px;
+      //color: #FFCC00FF;
+      //opacity: .7;
+      color: #474747;
+    }
+  }
+</style>
